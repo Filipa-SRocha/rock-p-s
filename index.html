@@ -8,7 +8,30 @@
 <body>
     <script>
 
-        
+    function myRandom(){
+        return Math.floor(Math.random() * 4)
+    }
+
+
+    function computerPlay(){
+        let number=myRandom();
+        switch(number){
+            case 0:
+                return "Rock";
+                break;
+            case 1:
+                return "Paper";
+                break;
+            case 2:
+                return "Scissors";
+                break;
+            default:
+                return alert("Somenthing went wrong!")        
+        }
+
+    }
+
+    console.log(computerPlay());
     </script>
 </body>
 </html>
