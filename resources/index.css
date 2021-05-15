@@ -1,56 +1,81 @@
-#consola{
-    background: #49beb7;
-    margin:100px;
-    padding: 10px;
+body {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 18px;
 }
 
-h1{
-    text-align: center;
+/*-----Game Console------*/
+
+#consola {
+	background: #00505e;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-areas:
+		'title game score'
+		'title buttons score';
 }
 
-#buttons{
-    width: 520px;
-    margin: 0 auto;
+h1 {
+	grid-area: title;
+	text-align: center;
+	margin-top: 30px;
+	line-height: 50px;
+	text-decoration: underline;
+	font-size: 28px;
 }
 
-
-.btn{
-    background: #facf5a;
-    padding: 10px;
-    width: 150px;
-    height: 50px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
-    font-weight: 800;
-    margin: 10px;
-    border: 3px solid #e7b93b;
+#buttons {
+	width: 520px;
+	margin: 0 auto;
 }
 
-.btn:focus{
-    background: #ff5959;
-    border:none;
+.btn {
+	grid-area: buttons;
+	background: #facf5a;
+	padding: 10px;
+	width: 150px;
+	height: 50px;
+	font-size: 22px;
+	font-weight: 500;
+	margin: 10px;
+	border: 3px solid #e7b93b;
 }
 
-#pontos{
-    width: fit-content;
-    offset-position: -100px;
-    margin: 40px auto 0px; 
-}
-#computador, #jogador{
-    width: fit-content;
-    display: inline-block;
-    margin-left: 65px;
-    margin-right: 98px;
+.btn:focus {
+	background: #ff5959;
+	border: none;
 }
 
-#game{
-    background: #085f63;
-    border: 3px solid #053e41;
-    width: fit-content;
-    max-width: 400px;
-    min-width: 300px;
-    height: 50px;
-    margin-top: 100px;
-    margin: 150px auto 50px;
-    text-align: center;
+#pontos {
+	grid-area: score;
+	width: fit-content;
+	font-size: 28px;
+	text-align: center;
+}
+
+.score {
+	margin-top: 50px;
+}
+
+.score div {
+	width: 30px;
+	height: 30px;
+	background: #0138429c;
+	margin: auto;
+	margin-top: 10px;
+	border-radius: 5px;
+	padding: 3px;
+}
+
+#game {
+	grid-area: game;
+	align-self: center;
+	justify-self: center;
+	background: #bcc3c452;
+	border-radius: 5px;
+	box-shadow: 0 0 8px white;
+	padding: 15px;
+	width: 350px;
+	height: 50px;
+	text-align: center;
 }
